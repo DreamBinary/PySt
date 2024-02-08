@@ -70,7 +70,26 @@ def test(num=100):
 if __name__ == '__main__':
     for i in [100, 10000, 1000000, 100000000]:
         test(i)
+"""
+mod test_para_sum;
 
+use test_para_sum::para_sum;
+use std::time;
+
+fn main() {
+    for i in [100, 10000, 1000000, 100000000] {
+        // start = time.perf_counter()
+        let start = time::Instant::now();
+        para_sum(i);
+        let duration = start.elapsed();
+        println!("{}: {:?}", i, duration);
+    }
+}
+100: 1.963492ms
+10000: 533.593µs
+1000000: 1.608709ms
+
+"""
 # num = 100
 # rust para: 0.0010953399978461675
 # rust no para: 7.9849996836856e-06
