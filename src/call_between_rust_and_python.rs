@@ -2,7 +2,7 @@ use rustpython::vm::{
     pyclass, pymodule, PyObject, PyPayload, PyResult, TryFromBorrowedObject, VirtualMachine,
 };
 
-pub fn main() {
+pub fn main_() {
     let interp = rustpython::InterpreterConfig::new()
         .init_stdlib()
         .init_hook(Box::new(|vm| {
@@ -29,7 +29,7 @@ pub fn main() {
 }
 
 #[pymodule]
-mod rust_py_module {
+pub mod rust_py_module {
     use rustpython::vm::{builtins::PyList, convert::ToPyObject, PyObjectRef};
 
     use super::*;

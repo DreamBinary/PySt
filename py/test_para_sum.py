@@ -3,8 +3,9 @@
 # @Time : 2024/2/7 17:10
 # @Author : fiv
 
-from pyst import para_sum, no_para_sum
 from multiprocessing.pool import ThreadPool
+
+from pyst import para_sum, no_para_sum
 
 
 def para_sum_py(n):
@@ -68,6 +69,10 @@ def test(num=100):
 
 
 if __name__ == '__main__':
+    # import pyst
+    #
+    # print(dir(pyst))
+    # print(pyst.__path__)
     for i in [100, 10000, 1000000, 100000000]:
         test(i)
 
