@@ -1,6 +1,5 @@
 use super::utils::constructor_shout;
 
-
 /// This struct is responsible for managing the data around a stock.
 ///
 /// # Fields 

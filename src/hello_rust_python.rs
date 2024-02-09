@@ -4,9 +4,8 @@
 // @Author : fiv
 
 
-use pyo3::indoc::{formatdoc, indoc, printdoc};
+use pyo3::indoc::{indoc, printdoc};
 use rustpython_vm as vm;
-
 
 pub fn hello_rust_python() -> vm::PyResult<()> {
     vm::Interpreter::without_stdlib(Default::default()).enter(|vm| {

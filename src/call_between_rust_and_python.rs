@@ -30,8 +30,9 @@ pub fn main() {
 
 #[pymodule]
 mod rust_py_module {
-    use super::*;
     use rustpython::vm::{builtins::PyList, convert::ToPyObject, PyObjectRef};
+
+    use super::*;
 
     #[pyfunction]
     fn rust_function(

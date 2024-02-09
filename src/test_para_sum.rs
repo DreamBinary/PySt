@@ -1,8 +1,8 @@
 use std::time;
-use rustpython_vm as vm;
+
 use pyo3::indoc::formatdoc;
 use pyo3::prelude::*;
-
+use rustpython_vm as vm;
 
 #[pyfunction]
 pub fn para_sum(n: i64) -> i64 {
@@ -39,6 +39,7 @@ fn one_sum(a: i64, b: i64) -> i64 {
     }
     return sum;
 }
+
 // #[pyfunction]
 pub fn sum_rust_python(n: i64) -> vm::PyResult<()> {
     vm::Interpreter::without_stdlib(Default::default()).enter(|vm| {

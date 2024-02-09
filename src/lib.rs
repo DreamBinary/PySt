@@ -1,12 +1,12 @@
+use pyo3::prelude::*;
+
+use test_para_sum::*;
+
 mod test_para_sum;
 mod call_between_rust_and_python;
 mod hello_rust_python;
 mod hello_pyo3;
 mod hello_inline_python;
-
-use test_para_sum::*;
-use pyo3::prelude::*;
-
 
 /// A Python module implemented in Rust.
 #[pymodule]
