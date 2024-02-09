@@ -70,38 +70,24 @@ def test(num=100):
 if __name__ == '__main__':
     for i in [100, 10000, 1000000, 100000000]:
         test(i)
-"""
-mod test_para_sum;
 
-use test_para_sum::para_sum;
-use std::time;
-
-fn main() {
-    for i in [100, 10000, 1000000, 100000000] {
-        // start = time.perf_counter()
-        let start = time::Instant::now();
-        para_sum(i);
-        let duration = start.elapsed();
-        println!("{}: {:?}", i, duration);
-    }
-}
-100: 1.963492ms
-10000: 533.593µs
-1000000: 1.608709ms
-
-"""
 # num = 100
-# rust para: 0.0010953399978461675
-# rust no para: 7.9849996836856e-06
-# py para: 0.008112716997857206
-# py no para: 6.080997991375625e-06
+# rust para: 0.0008132419898174703
+# rust no para: 1.073098974302411e-05
+# py para: 0.012421645995345898
+# py no para: 6.541988113895059e-06
 # num = 10000
-# rust para: 0.0005697739979950711
-# rust no para: 6.185800157254562e-05
-# py para: 0.005052483000326902
-# py no para: 0.00035104000562569126
+# rust para: 0.0005313739966368303
+# rust no para: 6.447300256695598e-05
+# py para: 0.006745228005456738
+# py no para: 0.0003836519899778068
 # num = 1000000
-# rust para: 0.0013833439952577464
-# rust no para: 0.005882632001885213
-# py para: 0.04755044199555414
-# py no para: 0.041981973001384176
+# rust para: 0.0014951210032450035
+# rust no para: 0.005787941001472063
+# py para: 0.04720868400181644
+# py no para: 0.042303146998165175
+# num = 100000000
+# rust para: 0.09585643401078414
+# rust no para: 0.6242619310069131
+# py para: 4.069613264990039
+# py no para: 4.310906865008292

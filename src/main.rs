@@ -6,6 +6,11 @@ mod hello_pyo3;
 
 use hello_pyo3::hello_pyo3;
 
+mod test_para_sum;
+mod hello_rust_python;
+use hello_rust_python::hello_rust_python;
+use test_para_sum::test_para_sum;
+
 fn main() {
-    hello_pyo3().unwrap();
+    test_para_sum();
 }
