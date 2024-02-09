@@ -1,11 +1,11 @@
 use std::time;
 use rustpython_vm as vm;
-use pyo3::indoc::{formatdoc, indoc, printdoc};
+use pyo3::indoc::formatdoc;
 use pyo3::prelude::*;
 
 
 #[pyfunction]
-fn para_sum(n: i64) -> i64 {
+pub fn para_sum(n: i64) -> i64 {
     let thread_num = 10;
     let mut sum = 0;
     let mut handles = vec![];
@@ -23,7 +23,7 @@ fn para_sum(n: i64) -> i64 {
 
 
 #[pyfunction]
-fn no_para_sum(n: i64) -> i64 {
+pub fn no_para_sum(n: i64) -> i64 {
     let mut sum = 0;
     for i in 0..n {
         sum += i;
@@ -39,8 +39,8 @@ fn one_sum(a: i64, b: i64) -> i64 {
     }
     return sum;
 }
-
-fn sum_rust_python(n: i64) -> vm::PyResult<()> {
+// #[pyfunction]
+pub fn sum_rust_python(n: i64) -> vm::PyResult<()> {
     vm::Interpreter::without_stdlib(Default::default()).enter(|vm| {
         let source = formatdoc! {
        r#"

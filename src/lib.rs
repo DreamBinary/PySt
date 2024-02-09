@@ -13,5 +13,7 @@ use pyo3::prelude::*;
 fn pyst(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(para_sum, m)?)?;
     m.add_function(wrap_pyfunction!(no_para_sum, m)?)?;
+    // m.add_function(wrap_pyfunction!(sum_rust_python, m)?)?;
+
     Ok(())
 }
