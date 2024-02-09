@@ -1,14 +1,11 @@
-mod test_para_sum;
+// -*- coding:utf-8 -*-
+// @FileName : main.rs
+// @Time : 2024/2/9 11:39
+// @Author : fiv
+mod hello_pyo3;
 
-use test_para_sum::para_sum;
-use std::time;
+use hello_pyo3::hello_pyo3;
 
 fn main() {
-    for i in [100, 10000, 1000000] {
-        // start = time.perf_counter()
-        let start = time::Instant::now();
-        para_sum(i);
-        let duration = start.elapsed();
-        println!("{}: {:?}", i, duration);
-    }
+    hello_pyo3().unwrap();
 }
