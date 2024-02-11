@@ -7,6 +7,7 @@ mod call_between_rust_and_python;
 mod hello_rust_python;
 mod hello_pyo3;
 mod hello_inline_python;
+mod hello_tch;
 
 /// A Python module implemented in Rust.
 #[pymodule]

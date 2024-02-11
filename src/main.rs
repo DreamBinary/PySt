@@ -1,16 +1,12 @@
-use call_between_rust_and_python::main_;
-
 // -*- coding:utf-8 -*-
 // @FileName : main.rs
 // @Time : 2024/2/9 11:39
 // @Author : fiv
-mod hello_pyo3;
+use hello_tch::hello_tch;
 
-mod test_para_sum;
-mod hello_rust_python;
-
-mod call_between_rust_and_python;
+mod hello_tch;
 
 fn main() {
-    main_();
+    hello_tch();
+    println!("Hello, world!")
 }
