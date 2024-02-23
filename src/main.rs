@@ -1,12 +1,10 @@
-// -*- coding:utf-8 -*-
-// @FileName : main.rs
-// @Time : 2024/2/9 11:39
-// @Author : fiv
-use hello_tch::hello_tch;
-
-mod hello_tch;
-
 fn main() {
-    hello_tch();
-    println!("Hello, world!")
+    let hello = String::from("中国人");
+    let longer_delimiter = r###"A string with "# in it. And even "##!"###;
+    println!("{}", longer_delimiter);
+    // println!("the first word is: {}", word);
+}
+
+fn first_word(s: &String) -> &str {
+    &s[..1]
 }
